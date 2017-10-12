@@ -1,0 +1,12 @@
+<mat-spinner *ngIf="!followingList" class="spinner"></mat-spinner>
+<mat-card *ngFor='let follow of followingList' class="example-card" [routerLink]="['/user/', follow.username]">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>{{ follow.username }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ follow.bio }}
+    </p>
+  </mat-card-content>
+</mat-card>
